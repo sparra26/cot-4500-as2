@@ -54,13 +54,22 @@ for i in range(len(coefficients)):
 print(result)
 print("\n")
 
-
-
-
-
-
-
-
+# Question 4
+def divided_difference(x, y, y_prime):
+    n = len(x)
+    f = np.zeros((n, n))
+    f[:, 0] = y
+    f[:, 1] = y_prime
+    for j in range(2, n):
+        for i in range(n-j+1):
+            f[i, j] = (f[i+1, j-1] - f[i, j-1]) / (x[i+j-1] - x[i])
+    return np.hstack((np.array([x]).T, f))
+x = [3.6, 3.8, 3.9]
+y = [1.675, 1.436, 1.318]
+y_prime = [-1.195, -1.188, -1.182]
+approximation_matrix = divided_difference(x, y, y_prime)
+print(approximation_matrix)
+print("\n")
 
 # Question 5
 
