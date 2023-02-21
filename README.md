@@ -7,4 +7,4 @@ Some of the topics covered in this assignment are Neville's method, Newton's for
 
 # Additional Instructions
 
-To run intro_to_python.py, type into the command line "python3 assignment_2.py" and hit enter.
+To run assignment_2.py, type into the command line "python3 assignment_2.py" and hit enter.
